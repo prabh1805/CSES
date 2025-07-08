@@ -1,0 +1,50 @@
+# Start by ignoring everything
+*
+
+# --- DO NOT IGNORE DIRECTORIES THEMSELVES ---
+# This line is crucial. It un-ignores all directories.
+# Without this, the '!' rules for files inside subdirectories won't work.
+!*/
+
+# --- Then allow specific file types within those directories ---
+!*.cpp
+!*.java
+
+# --- Common OS and IDE related files to explicitly ignore ---
+
+# macOS specific files
+.DS_Store
+
+# Common C/C++ generated files
+a.out               # Default executable name
+*.o                 # Object files
+*.gch               # Precompiled headers
+*.out               # Generic executable output
+*.exe               # Windows executables
+*.dll               # Windows dynamic libraries
+*.lib               # Windows static libraries
+
+# Java specific generated files
+*.class             # Compiled Java bytecode
+*.jar               # Java Archive files
+
+# IDE/Editor specific files and directories
+.vscode/            # VS Code settings
+.idea/              # IntelliJ/CLion settings
+*.iml               # IntelliJ IDEA module files
+target/             # Maven/Gradle build directory for Java projects
+build/              # General build directory
+bin/                # General binary directory
+
+# Other common temporary or hidden files
+*~                  # Backup files
+.#* # Emacs lock/backup files
+#*#                 # Emacs auto-save files
+.tags               # Ctags files
+.cache/             # Cache directories
+npm-debug.log       # npm debug logs (if you use Node.js for anything)
+yarn-debug.log
+yarn-error.log
+
+# Logs
+*.log
